@@ -6,12 +6,24 @@
 
 		<link rel="stylesheet" href="../node_modules/lexicon-ux/build/css/atlas-font-awesome.css">
 		<script src="../build/globals/dropdown.js"></script>
+
+		<style>
+			body {
+				padding: 10px;
+			}
+
+			.dropdown {
+				margin-right: 10px;
+			}
+		</style>
 	</head>
 	<body>
 		<h1>Lexicon Dropdown Component</h1>
 
+		<div id="dropdowns"></div>
+
 		<script type="text/javascript">
-			new metal.LexiconDropdown({items:[]});
+			new metal.LexiconDropdown({items:[]}, '#dropdowns');
 			window.myDropdown = new metal.LexiconDropdown({
 				items: [{
 					label: 'Order by:',
@@ -41,7 +53,7 @@
 					label: 'Status',
 					type: 'link'
 				}]
-			});
+			}, '#dropdowns');
 
 			new metal.LexiconDropdown({
 				items: [{
@@ -86,7 +98,7 @@
 					label: 'Scope',
 					type: 'link'
 				}]
-			});
+			}, '#dropdowns');
 		</script>
 	</body>
 </html>
